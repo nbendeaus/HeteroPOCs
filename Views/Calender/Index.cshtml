@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("AddToICalendar", "Home", new
+{
+    downloadFileName = "thisEvent.ics",
+    eventId = Model.TheEvent.ID
+}))
+{
+    <input type="submit" value="Add to iCal" class="ical-button" id="button" />
+    <br />
+}
